@@ -9,6 +9,8 @@ import {
   Query,
 } from '@nestjs/common';
 
+import { UsersService } from './users.service';
+
 @Controller('users')
 export class UsersController {
   @Get() // GET /users  or /users?role=value
@@ -32,7 +34,7 @@ export class UsersController {
   }
 
   @Delete(':id') // DELETE /users/:id
-  dlete(@Param('id') id: string) {
+  delete(@Param('id') id: string) {
     return { id };
   }
 }
